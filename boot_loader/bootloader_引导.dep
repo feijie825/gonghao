@@ -1,0 +1,76 @@
+Dependencies for Project 'bootloader', Target '引导': (DO NOT MODIFY !)
+F (.\bl_autobaud.c)(0x4C33DC36)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\bl_autobaud.o --depend .\bl_autobaud.d)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S2139.h)(0x4C33DBF0)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_types.h)(0x492B4FE8)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_config.h)(0x4C341228)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_uart.h)(0x4C33D3E8)
+F (.\bl_check.c)(0x4E0A98CE)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\bl_check.o --depend .\bl_check.d)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\lm3s2139.h)(0x4C33DBF0)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_types.h)(0x492B4FE8)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_check.h)(0x490584B2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_config.h)(0x4C341228)
+F (.\bl_main.c)(0x526DC71A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\bl_main.o --depend .\bl_main.d)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_commands.h)(0x4BAADB8E)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_config.h)(0x4C341228)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_decrypt.h)(0x490584B2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_i2c.h)(0x490584B2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_packet.h)(0x490584B2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_ssi.h)(0x490584B2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_uart.h)(0x4C33D3E8)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S2139.h)(0x4C33DBF0)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_types.h)(0x492B4FE8)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\lm3s21xx_lib.h)(0x4BA32F70)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_gpio.h)(0x49212AE2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_ssi.h)(0x4923A910)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\lm3s21xx_sysctl.h)(0x4D4102A2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_systick.h)(0x491CF42E)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_debug.h)(0x4917C28A)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_cpu.h)(0x492A4928)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\disp.h)(0x526DC087)
+F (.\bl_packet.c)(0x4BAAD7F2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\bl_packet.o --depend .\bl_packet.d)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_commands.h)(0x4BAADB8E)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_config.h)(0x4C341228)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_i2c.h)(0x490584B2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_packet.h)(0x490584B2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_ssi.h)(0x490584B2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_uart.h)(0x4C33D3E8)
+F (.\bl_uart.c)(0x4C33DEB2)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\bl_uart.o --depend .\bl_uart.d)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\lm3s2139.h)(0x4C33DBF0)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_types.h)(0x492B4FE8)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_config.h)(0x4C341228)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\bl_uart.h)(0x4C33D3E8)
+F (.\Disp.C)(0x4BB155BC)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\disp.o --depend .\disp.d)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S2139.h)(0x4C33DBF0)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_types.h)(0x492B4FE8)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_Lib.h)(0x4BA32F70)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_gpio.h)(0x49212AE2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_ssi.h)(0x4923A910)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\lm3s21xx_sysctl.h)(0x4D4102A2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_systick.h)(0x491CF42E)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_debug.h)(0x4917C28A)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_cpu.h)(0x492A4928)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\Disp.h)(0x526DC087)
+F (.\LM3S21xx_gpio.c)(0x526DC15A)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\lm3s21xx_gpio.o --depend .\lm3s21xx_gpio.d)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S2139.h)(0x4C33DBF0)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_types.h)(0x492B4FE8)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_Lib.h)(0x4BA32F70)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_gpio.h)(0x49212AE2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_ssi.h)(0x4923A910)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\lm3s21xx_sysctl.h)(0x4D4102A2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_systick.h)(0x491CF42E)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_debug.h)(0x4917C28A)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_cpu.h)(0x492A4928)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\disp.h)(0x526DC087)
+F (.\LM3S21xx_ssi.c)(0x4BA6FC32)(-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\lm3s21xx_ssi.o --depend .\lm3s21xx_ssi.d)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S2139.h)(0x4C33DBF0)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_types.h)(0x492B4FE8)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_Lib.h)(0x4BA32F70)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_gpio.h)(0x49212AE2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_ssi.h)(0x4923A910)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\lm3s21xx_sysctl.h)(0x4D4102A2)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_systick.h)(0x491CF42E)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_debug.h)(0x4917C28A)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\LM3S21xx_cpu.h)(0x492A4928)
+I (D:\zlz\校验台改造\program\Bootloader\boot_loader\disp.h)(0x526DC087)
+F (.\bl_startup_rvmdk.S)(0x4C340D50)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary--pd "_BOOST_LDO_VOLTAGE SETA 1" --pd "_CRYSTAL_FREQ SETA 1" --list .\bl_startup_rvmdk.lst --xref -o .\bl_startup_rvmdk.o --depend .\bl_startup_rvmdk.d)
+F (.\说明.txt)(0x526DC976)()

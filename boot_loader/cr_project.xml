@@ -1,0 +1,9 @@
+<project>
+  <import src=".">
+    <grep filePattern="*.c" pattern="\s*#\s*include\s*&quot;[\./]*" replace="#include &quot;" />
+    <exclude>cr_project.xml</exclude>
+    <exclude>{(test)}</exclude>
+    <exclude>{bl_startup_(ewarm|ewarm4|gcc|rvmdk|sourcerygxx)\.(c|S)}</exclude>
+    <exclude>{.*\.(ewd|ewp|eww|icf|Opt|sct|Uv2|xcl|xml)}</exclude>
+  </import>
+</project>

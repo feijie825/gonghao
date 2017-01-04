@@ -1,0 +1,83 @@
+升级工程说明
+bl_config.h中包含 升级设置预定义
+当 升级检查(I/O管脚)使能时  #define ENABLE_UPDATE_CHECK (有效)
+   必须使能 #define FORCED_UPDATE_PERIPH    SYSCTL_RCGC2_GPIOB	定义强制升级管脚端口设备
+            #define FORCED_UPDATE_PORT      GPIO_PORTB_BASE		定义强制升级管脚所在端口
+            #define FORCED_UPDATE_PIN       4					定义检测管脚
+            #define FORCED_UPDATE_POLARITY  0					极性设置 0管脚为低电平升级 1管脚高电平升级 
+	   
+#define UART_ENABLE_UPDATE	    //通过UART升级
+//#define SSI_ENABLE_UPDATE		//通过SSI升级
+//#define I2C_ENABLE_UPDATE	    //通过I2C升级
+//#define ENET_ENABLE_UPDATE	//通过以太网升级
+
+定义升级时除了要在bl_config.h中定义外还要在bl_config.inc文件中定义
+
+bl_uart.c	 //UART升级程序
+bl_ssi.c	 //SSI 升级程序
+bl_i2c.c	 //I2C 升级程序
+bl_enet.c	 //ENET升级程序
+
+当定义升级方式时要包含对应的升级文件
+
+升级程序运行后被调入RAM区运行 所以可以升级bootloader 本身 但是需要在bl_config.h中开放使能
+
+//#define ENABLE_BL_UPDATE		  //是否允许bootloader 升级
+
+小显示引导 包含bl_autobaud.c
+               bl_check.c
+			   bl_main.c
+			   bl_packet.c
+			   bl_uart.c
+               bl_ssi.c	     //SSI 升级程序
+               bl_i2c.c	     //I2C 升级程序
+               bl_enet.c	 //ENET升级程序
+			   bl_decrypt.c
+			   bl_startup_rvmdk.S共10个文件
+2008.11.12 应用程序生成的十六进制文件 *.hex 转化成二进制文件 *.bin 时  要和芯片实际FLASH大小一致
+否则会出现地址溢出错误
+*.hex文件转换成*.bin文件时 用润飞RF1800软件 调入*.hex文件 保存文件 选择二进制保存
+修改保存缓冲区地址选为应用程序起始地址
+
+2008.11.12 张力阵在bl_startup_rvmdk.S启动文件中添加 Reset_Target子程序
+调整内核电压 设置系统频率
+2008.11.12 张力阵在bl_autobaud.c(自动波特率检测程序)中添加UART-TX管脚设置
+在使能波特率自动检测后 在检测波特率时将UART0 发送管脚设置为I/O口输出模式 同时输出高电平
+解决升级软件LM Flash Programmer 自动波特率检测使能时出现端口不能初始化问题
+该问题可能是原程序未对UART TX管脚初始化,系统默任输入 ,计算机PC RX接收管脚为低电平所致
+修改程序后该问题解决
+
+bootloader 程序调试时出现 bl_startup_rvmdk.S程序起始处,将程序调入RAM区时,有些单元仍为0xFFFF
+原因不明 通过调整内核电压和加20ms延时后,该问题再未出现
+
+LM FLASH Programmer 命令 数据包 第一个字符	 bl_commands.h
+#define COMMAND_PING            0x20
+#define COMMAND_DOWNLOAD        0x21  +4字节起始地址 +4字节数据长度
+#define COMMAND_RUN             0x22
+#define COMMAND_GET_STATUS      0x23
+#define COMMAND_SEND_DATA       0x24
+#define COMMAND_RESET           0x25
+#define COMMAND_RET_SUCCESS     0x40
+#define COMMAND_RET_UNKNOWN_CMD 0x41
+#define COMMAND_RET_INVALID_CMD 0x42
+#define COMMAND_RET_INVALID_ADR 0x43
+#define COMMAND_RET_FLASH_FAIL  0x44
+#define COMMAND_ACK             0xcc
+#define COMMAND_NAK             0x33
+
+//*****************************************************************************
+//2010.3.25 张力阵增加指令
+//设置BOOT 响应ID号
+//长度4字节
+//格式 长度+校验和+命令号+响应ID
+//*****************************************************************************
+#define COMMAND_BOOTID          0x28
+//例:04 29 28 01  设置1号表位 响应引导程序
+//*****************************************************************************
+//2010.3.25 张力阵增加指令
+//设置引导更新使能(禁能)命令
+//长度4字节
+//格式 长度+校验和+命令号+响应ID
+//*****************************************************************************
+#define COMMAND_BOOTLOADER      0x29
+

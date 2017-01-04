@@ -1,0 +1,9 @@
+lm3s21xx_ethernet.o: LM3S21xx_ethernet.c
+lm3s21xx_ethernet.o: hw_ints.h
+lm3s21xx_ethernet.o: hw_memmap.h
+lm3s21xx_ethernet.o: hw_types.h
+lm3s21xx_ethernet.o: hw_ethernet.h
+lm3s21xx_ethernet.o: C:\Keil\ARM\INC\Luminary\debug.h
+lm3s21xx_ethernet.o: C:\Keil\ARM\INC\Luminary\interrupt.h
+lm3s21xx_ethernet.o: C:\Keil\ARM\INC\Luminary\sysctl.h
+lm3s21xx_ethernet.o: C:\Keil\ARM\INC\Luminary\ethernet.h

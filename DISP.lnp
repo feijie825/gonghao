@@ -1,0 +1,5 @@
+--cpu Cortex-M3 "lm3s21xx_can.o" "lm3s21xx_flash.o" "lm3s21xx_gpio.o" "lm3s21xx_interrupt.o" "lm3s21xx_mpu.o" "lm3s21xx_ssi.o" "lm3s21xx_sysctl.o" "lm3s21xx_systick.o" "lm3s21xx_timer.o" "lm3s21xx_uart.o" "lm3s21xx_watchdog.o" "lm3s21xx_vect.s.o" "cpu_keil.o" "main.o" "interrupt.o" "vari.o" "disp.o" "init.o" "can.o" "uart.o" "clk_err.o" "eng_err.o" "bitvari.o" "º”√‹.o" --library_type=microlib --feedback "DISP.fed" 
+--strict --scatter "–°œ‘ æ.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\DISP.map" -o "DISP.axf"

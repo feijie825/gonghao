@@ -1,0 +1,30 @@
+--cpu Cortex-M3
+".\lm3s21xx_can.o"
+".\lm3s21xx_flash.o"
+".\lm3s21xx_gpio.o"
+".\lm3s21xx_interrupt.o"
+".\lm3s21xx_mpu.o"
+".\lm3s21xx_ssi.o"
+".\lm3s21xx_sysctl.o"
+".\lm3s21xx_systick.o"
+".\lm3s21xx_timer.o"
+".\lm3s21xx_uart.o"
+".\lm3s21xx_watchdog.o"
+".\lm3s21xx_adc.o"
+".\cpu_keil.o"
+".\lm3s21xx_vect.o"
+".\main.o"
+".\interrupt.o"
+".\vari.o"
+".\init.o"
+".\can.o"
+".\uart.o"
+".\eng_err.o"
+".\bitvari.o"
+".\solid.o"
+".\cs5460a.o"
+--library_type=microlib --scatter ".\debug_in_flash.sct"
+
+--entry Reset_Handler --summary_stderr --info summarysizes --map --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\新功耗.map" -o .\新功耗.axf

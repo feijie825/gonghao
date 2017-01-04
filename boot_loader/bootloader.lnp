@@ -1,0 +1,17 @@
+--cpu Cortex-M3
+".\bl_autobaud.o"
+".\bl_check.o"
+".\bl_main.o"
+".\bl_packet.o"
+".\bl_uart.o"
+".\disp.o"
+".\lm3s21xx_gpio.o"
+".\lm3s21xx_ssi.o"
+".\bl_startup_rvmdk.o"
+--library_type=microlib
+--feedback ".\bootloader.fed" --feedback_image=none
+--strict --scatter ".\bl_link.sct"
+
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\bootloader.map" -o .\bootloader.axf

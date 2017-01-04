@@ -1,0 +1,5 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork 
+-I "D:\Program Files\Keil\ARM\RV31\INC"
+-I "D:\Program Files\Keil\ARM\CMSIS\Include"
+-I "D:\Program Files\Keil\ARM\Inc\Luminary"
+-o .\can.o --omf_browse .\can.crf --depend .\can.d --feedback ".\ÐÂ¹¦ºÄ.fed" "CAN.C"

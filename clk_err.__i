@@ -1,0 +1,1 @@
+--feedback "–°œ‘ æ.fed" -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\Luminary" -o "clk_err.o" --omf_browse "clk_err.crf" --depend "clk_err.d" "CLK_ERR.C"

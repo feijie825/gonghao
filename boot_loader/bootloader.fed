@@ -1,0 +1,26 @@
+;#<FEEDBACK># ARM Linker, 5.03 [Build 76]: Last Updated: Mon Oct 28 10:08:27 2013
+;VERSION 0.2
+;FILE bl_check.o
+;FILE bl_main.o
+;FILE bl_packet.o
+;FILE bl_uart.o
+;FILE disp.o
+;FILE lm3s21xx_gpio.o
+GPIODirModeGet <= USED 0
+GPIOIntTypeGet <= USED 0
+GPIOIntTypeSet <= USED 0
+GPIOPadConfigGet <= USED 0
+GPIOPinIntClear <= USED 0
+GPIOPinIntDisable <= USED 0
+GPIOPinIntEnable <= USED 0
+GPIOPinIntStatus <= USED 0
+GPIOPinTypeGPIOInput <= USED 0
+GPIOPinTypeGPIOOutputOD <= USED 0
+GPIOPinTypeI2C <= USED 0
+GPIOPinTypePWM <= USED 0
+GPIOPinTypeQEI <= USED 0
+GPIOPinTypeTimer <= USED 0
+GPIOPinTypeUART <= USED 0
+GPIOPinTypeUSBDigital <= USED 0
+;FILE lm3s21xx_ssi.o
+SSIDisable <= USED 0

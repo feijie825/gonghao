@@ -1,0 +1,27 @@
+*** Creating Trace Output File 'boot.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"lm3s21xx_ssi.o"'
+### List of Objects: adding '"bl_autobaud.o"'
+### List of Objects: adding '"bl_check.o"'
+### List of Objects: adding '"bl_main.o"'
+### List of Objects: adding '"bl_packet.o"'
+### List of Objects: adding '"bl_uart.o"'
+### List of Objects: adding '"disp.o"'
+### List of Objects: adding '"lm3s21xx_gpio.o"'
+### List of Objects: adding '"bl_startup_rvmdk.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "lm3s21xx_ssi.o" "bl_autobaud.o" "bl_check.o" "bl_main.o" "bl_packet.o" "bl_uart.o" "disp.o" "lm3s21xx_gpio.o" "bl_startup_rvmdk.o" --strict --scatter ".\bl_link.sct" 
+--entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\boot.map" -o "boot.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'boot.axf'
+### ADS-LD Command File: 'boot.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'boot.lnp', Handle=0x00000718
+### Writing '.lnp' file
+### ADS-LD Command file 'boot.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

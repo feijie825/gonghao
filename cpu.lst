@@ -1,0 +1,211 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;*******************************************************
+                       **********************
+    2 00000000         ;
+    3 00000000         ; cpu.S - Instruction wrappers for special CPU instructi
+                       ons needed by the
+    4 00000000         ;         drivers.
+    5 00000000         ;
+    6 00000000         ; Copyright (c) 2006-2008 Luminary Micro, Inc.  All righ
+                       ts reserved.
+    7 00000000         ; 
+    8 00000000         ; Software License Agreement
+    9 00000000         ; 
+   10 00000000         ; Luminary Micro, Inc. (LMI) is supplying this software 
+                       for use solely and
+   11 00000000         ; exclusively on LMI's microcontroller products.
+   12 00000000         ; 
+   13 00000000         ; The software is owned by LMI and/or its suppliers, and
+                        is protected under
+   14 00000000         ; applicable copyright laws.  All rights are reserved.  
+                       You may not combine
+   15 00000000         ; this software with "viral" open-source software in ord
+                       er to form a larger
+   16 00000000         ; program.  Any use in violation of the foregoing restri
+                       ctions may subject
+   17 00000000         ; the user to criminal sanctions under applicable laws, 
+                       as well as to civil
+   18 00000000         ; liability for the breach of the terms and conditions o
+                       f this license.
+   19 00000000         ; 
+   20 00000000         ; THIS SOFTWARE IS PROVIDED "AS IS".  NO WARRANTIES, WHE
+                       THER EXPRESS, IMPLIED
+   21 00000000         ; OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED W
+                       ARRANTIES OF
+   22 00000000         ; MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE A
+                       PPLY TO THIS SOFTWARE.
+   23 00000000         ; LMI SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPE
+                       CIAL, INCIDENTAL, OR
+   24 00000000         ; CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
+   25 00000000         ; 
+   26 00000000         ; This is part of revision 3416 of the Stellaris Periphe
+                       ral Driver Library.
+   27 00000000         ;
+   28 00000000         ;*******************************************************
+                       **********************
+   29 00000000         
+   30 00000000         ;    .include "asmdefs.h"
+   31 00000000         ;*******************************************************
+                       **********************
+   32 00000000         ;
+   33 00000000         ; The entire contents of this file go into the code sect
+                       ion.
+   34 00000000         ;
+   35 00000000         ;*******************************************************
+                       **********************
+   36 00000000         ;__LIBRARY__ __lib_cpu
+   37 00000000                 area             ||.text||, code, readonly, alig
+n=2
+   38 00000000         
+   39 00000000         ;*******************************************************
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                       **********************
+   40 00000000         ;
+   41 00000000         ; Wrapper function for the CPSID instruction.  Returns t
+                       he state of PRIMASK
+   42 00000000         ; on entry.
+   43 00000000         ;
+   44 00000000         ;*******************************************************
+                       **********************
+   45 00000000                 export           CPUcpsid
+   46 00000000         ;__THUMB_LABEL__
+   47 00000000         CPUcpsid                             ;__LABEL__
+   48 00000000 F3EF 8010       mrs              r0, PRIMASK
+   49 00000004 B672            cpsid            i
+   50 00000006 4770            bx               lr
+   51 00000008         
+   52 00000008         ;*******************************************************
+                       **********************
+   53 00000008         ;
+   54 00000008         ; Wrapper function for the CPSIE instruction.  Returns t
+                       he state of PRIMASK
+   55 00000008         ; on entry.
+   56 00000008         ;
+   57 00000008         ;*******************************************************
+                       **********************
+   58 00000008                 export           CPUcpsie
+   59 00000008         ;__THUMB_LABEL__
+   60 00000008         CPUcpsie                             ;__LABEL__
+   61 00000008 F3EF 8010       mrs              r0, PRIMASK
+   62 0000000C B662            cpsie            i
+   63 0000000E 4770            bx               lr
+   64 00000010         
+   65 00000010         ;*******************************************************
+                       **********************
+   66 00000010         ;
+   67 00000010         ; Wrapper function for the WFI instruction.
+   68 00000010         ;
+   69 00000010         ;*******************************************************
+                       **********************
+   70 00000010                 export           CPUwfi
+   71 00000010         ;__THUMB_LABEL__
+   72 00000010         CPUwfi                               ;__LABEL__
+   73 00000010 BF30            wfi
+   74 00000012 4770            bx               lr
+   75 00000014         
+   76 00000014                 end
+Command Line: --debug --xref --device=DLM --apcs=interwork -ocpu.o -IC:\Keil\AR
+M\INC\Luminary --predefine="rvmdk SETA 1" --list=cpu.lst cpu.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+CPUcpsid 00000000
+
+Symbol: CPUcpsid
+   Definitions
+      At line 47 in file cpu.S
+   Uses
+      At line 45 in file cpu.S
+Comment: CPUcpsid used once
+CPUcpsie 00000008
+
+Symbol: CPUcpsie
+   Definitions
+      At line 60 in file cpu.S
+   Uses
+      At line 58 in file cpu.S
+Comment: CPUcpsie used once
+CPUwfi 00000010
+
+Symbol: CPUwfi
+   Definitions
+      At line 72 in file cpu.S
+   Uses
+      At line 70 in file cpu.S
+Comment: CPUwfi used once
+|.text| 00000000
+
+Symbol: |.text|
+   Definitions
+      At line 37 in file cpu.S
+   Uses
+      None
+Comment: |.text| unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+|.debug_info$$$.text| 00000000
+
+Symbol: |.debug_info$$$.text|
+   Definitions
+      None
+   Uses
+      None
+Warning: |.debug_info$$$.text| undefinedComment: |.debug_info$$$.text| unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+|.debug_line$$$.text| 00000000
+
+Symbol: |.debug_line$$$.text|
+   Definitions
+      None
+   Uses
+      None
+Warning: |.debug_line$$$.text| undefinedComment: |.debug_line$$$.text| unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.debug_abbrev 00000000
+
+Symbol: .debug_abbrev
+   Definitions
+      None
+   Uses
+      None
+Warning: .debug_abbrev undefinedComment: .debug_abbrev unused
+__ARM_asm.debug_abbrev 00000000
+
+Symbol: __ARM_asm.debug_abbrev
+   Definitions
+      None
+   Uses
+      None
+Warning: __ARM_asm.debug_abbrev undefinedComment: __ARM_asm.debug_abbrev unused
+2 symbols
+328 symbols in table

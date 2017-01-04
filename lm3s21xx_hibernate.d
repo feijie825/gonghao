@@ -1,0 +1,10 @@
+lm3s21xx_hibernate.o: LM3S21xx_hibernate.c
+lm3s21xx_hibernate.o: hw_hibernate.h
+lm3s21xx_hibernate.o: hw_ints.h
+lm3s21xx_hibernate.o: hw_memmap.h
+lm3s21xx_hibernate.o: hw_sysctl.h
+lm3s21xx_hibernate.o: hw_types.h
+lm3s21xx_hibernate.o: C:\Keil\ARM\INC\Luminary\debug.h
+lm3s21xx_hibernate.o: C:\Keil\ARM\INC\Luminary\hibernate.h
+lm3s21xx_hibernate.o: C:\Keil\ARM\INC\Luminary\sysctl.h
+lm3s21xx_hibernate.o: C:\Keil\ARM\INC\Luminary\interrupt.h

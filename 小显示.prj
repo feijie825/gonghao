@@ -1,0 +1,93 @@
+[Project ID]
+Signature=UE Proj: v.1
+[Project Information]
+Use Relative Directory=1
+Relative to Project File=1
+Include Sub Directories=1
+Project Tagfile=
+Project Wordfile=
+Filter=
+Create Tagfile=0
+[Group]
+0=库文件
+1=启动文件
+2=应用文件
+3=说明
+4=头文件
+[Files - 库文件]
+0=LM3S21xx_adc.c
+1=LM3S21xx_can.c
+2=LM3S21xx_comp.c
+3=LM3S21xx_ethernet.c
+4=LM3S21xx_flash.c
+5=LM3S21xx_gpio.c
+6=LM3S21xx_hibernate.c
+7=LM3S21xx_i2c.c
+8=LM3S21xx_interrupt.c
+9=LM3S21xx_mpu.c
+10=LM3S21xx_pwm.c
+11=LM3S21xx_qei.c
+12=LM3S21xx_ssi.c
+13=LM3S21xx_sysctl.c
+14=LM3S21xx_systick.c
+15=LM3S21xx_timer.c
+16=LM3S21xx_uart.c
+17=LM3S21xx_udma.c
+18=LM3S21xx_usb.c
+19=LM3S21xx_watchdog.c
+[Files - 启动文件]
+0=cpu_keil.S
+1=LM3S21xx_Vect.s
+[Files - 说明]
+0=说明.txt
+1=..\..\..\dis\WXCS_31.ASM
+[Files - 头文件]
+0=ENG_ERR.h
+1=Interrupt.h
+2=LM3S21xx_adc.h
+3=LM3S21xx_can.h
+4=LM3S21xx_comp.h
+5=LM3S21xx_cpu.h
+6=LM3S21xx_debug.h
+7=LM3S21xx_ethernet.h
+8=LM3S21xx_flash.h
+9=LM3S21xx_gpio.h
+10=LM3S21xx_hibernate.h
+11=LM3S21xx_i2c.h
+12=LM3S21xx_interrupt.h
+13=LM3S21xx_Lib.h
+14=LM3S21xx_mpu.h
+15=LM3S21xx_pin_map.h
+16=LM3S21xx_pwm.h
+17=LM3S21xx_qei.h
+18=LM3S21xx_rom.h
+19=LM3S21xx_rom_map.h
+20=LM3S21xx_ssi.h
+21=LM3S21xx_sysctl.h
+22=LM3S21xx_systick.h
+23=LM3S21xx_timer.h
+24=LM3S21xx_types.h
+25=LM3S21xx_uart.h
+26=LM3S21xx_udma.h
+27=LM3S21xx_usb.h
+28=LM3S21xx_watchdog.h
+29=lm3s2139.h
+30=vari.h
+31=加密.h
+32=CLK_ERR.h
+33=define.h
+34=Disp.h
+35=StdMtr.h
+[Files - 应用文件]
+0=加密.c
+1=BitVari.C
+2=CAN.C
+3=CLK_ERR.C
+4=Disp.C
+5=ENG_ERR.C
+6=Init.C
+7=Interrupt.C
+8=main.c
+9=UART.C
+10=vari.c
+11=StdMtr.C

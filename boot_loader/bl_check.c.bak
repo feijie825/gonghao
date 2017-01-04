@@ -1,0 +1,125 @@
+//*****************************************************************************
+//
+// bl_check.c - Code to check for a forced update.
+//
+// Copyright (c) 2006-2008 Luminary Micro, Inc.  All rights reserved.
+// 
+// Software License Agreement
+// 
+// Luminary Micro, Inc. (LMI) is supplying this software for use solely and
+// exclusively on LMI's microcontroller products.
+// 
+// The software is owned by LMI and/or its suppliers, and is protected under
+// applicable copyright laws.  All rights are reserved.  You may not combine
+// this software with "viral" open-source software in order to form a larger
+// program.  Any use in violation of the foregoing restrictions may subject
+// the user to criminal sanctions under applicable laws, as well as to civil
+// liability for the breach of the terms and conditions of this license.
+// 
+// THIS SOFTWARE IS PROVIDED "AS IS".  NO WARRANTIES, WHETHER EXPRESS, IMPLIED
+// OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF
+// MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE.
+// LMI SHALL NOT, IN ANY CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR
+// CONSEQUENTIAL DAMAGES, FOR ANY REASON WHATSOEVER.
+// 
+// This is part of revision 3416 of the Stellaris Peripheral Driver Library.
+//
+//*****************************************************************************
+
+#include "lm3s2139.h"
+#include "bl_check.h"
+#include "bl_config.h"
+
+extern unsigned long BOOT_EN[];
+extern unsigned char Board_Id;
+
+//*****************************************************************************
+//
+// A prototype for the function (in the startup code) for a predictable length
+// delay.
+//
+//*****************************************************************************
+extern void Delay(unsigned long ulCount);
+//*****************************************************************************
+//
+//! \addtogroup boot_loader_api
+//! @{
+//
+//*****************************************************************************
+
+//*****************************************************************************
+//
+//! Checks if an update is needed or is being requested.
+//!
+//! This function detects if an update is being requested or if there is no
+//! valid code presently located on the microcontroller.  This is used to tell
+//! whether or not to enter update mode.
+//!
+//! This function is contained in <tt>bl_check.c</tt>.
+//!
+//! \return Returns a non-zero value if an update is needed or is being
+//! requested and zero otherwise.
+//
+//*****************************************************************************
+unsigned long CheckForceUpdate(void)
+{
+    unsigned long *pulApp;
+
+#ifdef ENABLE_UPDATE_CHECK
+    //
+    // Enable the required GPIO module.
+    //
+    SYSCTL->RCGC[2] = FORCED_UPDATE_PERIPH;
+#endif
+
+	Delay(200);
+//  读板号
+    SYSCTL->RCGC[2] |= BOARD_ID_PERIPH;
+    BOARD_ID_PORT->DEN =0xFF;
+    Delay(200);
+    Board_Id=BOARD_ID_PORT->DATA[255];   //端口数据
+    Board_Id++;                          //板号
+    SYSCTL->RCGC[2] &= (~BOARD_ID_PERIPH);
+    // See if the first location is 0xfffffffff or something that does not
+    // look like a stack pointer, or if the second location is 0xffffffff or
+    // something that does not look like a reset vector.
+    //
+    if((BOOT_EN[0]=='E')&&
+	   (BOOT_EN[1]=='E'))
+     return(1);
+    else
+     BOOT_EN[2]=Board_Id;                //不是 该板 返回数据
+
+//检测是否有用户程序
+    pulApp = (unsigned long *)APP_START_ADDRESS;
+    if((pulApp[0] == 0xffffffff) || ((pulApp[0] & 0xfff00000) != 0x20000000) ||
+       (pulApp[1] == 0xffffffff) || ((pulApp[1] & 0xfff00001) != 0x00000001))
+    {	//用户程序区 没有程序 返回 1
+        return(1);
+    }
+//检测强制更新管脚
+#ifdef ENABLE_UPDATE_CHECK
+    //
+    // Check the pin to see if an update is being requested.
+    //
+    FORCED_UPDATE_PORT->DEN |= 1 << FORCED_UPDATE_PIN;
+    Delay(20000);
+    if(HWREG(FORCED_UPDATE_PORT + (1 << (FORCED_UPDATE_PIN + 2))) ==
+       (FORCED_UPDATE_POLARITY << FORCED_UPDATE_PIN))
+    {  //强制更新管脚不为设定电平返回 1
+        return(1);
+    }
+#endif
+
+    //
+    // No update was needed or requested.
+    // 进入用户程序
+    return(0);
+}
+
+//*****************************************************************************
+//
+// Close the Doxygen group.
+//! @}
+//
+//*****************************************************************************

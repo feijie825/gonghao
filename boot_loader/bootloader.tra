@@ -1,0 +1,28 @@
+*** Creating Trace Output File 'bootloader.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"bl_autobaud.o"'
+### List of Objects: adding '"bl_check.o"'
+### List of Objects: adding '"bl_main.o"'
+### List of Objects: adding '"bl_packet.o"'
+### List of Objects: adding '"bl_uart.o"'
+### List of Objects: adding '"disp.o"'
+### List of Objects: adding '"lm3s21xx_gpio.o"'
+### List of Objects: adding '"lm3s21xx_ssi.o"'
+### List of Objects: adding '"bl_startup_rvmdk.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "bl_autobaud.o" "bl_check.o" "bl_main.o" "bl_packet.o" "bl_uart.o" "disp.o" "lm3s21xx_gpio.o" "lm3s21xx_ssi.o" "bl_startup_rvmdk.o" 
+--library_type=microlib --strict --scatter ".\bl_link.sct" 
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\bootloader.map" -o bootloader.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'bootloader.axf'
+### ADS-LD Command File: 'bootloader.l2p'
+### Checking for dirty Components...
+### Creating CmdFile 'bootloader.l2p', Handle=0x00003FD0
+### Writing '.lnp' file
+### ADS-LD Command file 'bootloader.l2p' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

@@ -1,0 +1,222 @@
+ARM Linker, RVCT4.0 [Build 728] [Standard]
+
+==============================================================================
+
+Adding Veneers to the image
+
+    Adding TT veneer (10 bytes, Long) for call to 'CheckForceUpdate' from bl_startup_rvmdk.o(RESET).
+    Adding TT veneer (10 bytes, Long) for call to 'ConfigureDevice' from bl_startup_rvmdk.o(RESET).
+    Adding TT veneer (10 bytes, Long) for call to 'Updater' from bl_startup_rvmdk.o(RESET).
+    Adding TT veneer (10 bytes, Long) for call to 'Delay' from bl_check.o(.text).
+
+4 Veneer(s) (total 40 bytes) added to the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      260  bl_startup_rvmdk.o(RESET)
+    Disp.C                                   0x00000000   Number         0  disp.o ABSOLUTE
+    LM3S21xx_gpio.c                          0x00000000   Number         0  lm3s21xx_gpio.o ABSOLUTE
+    LM3S21xx_ssi.c                           0x00000000   Number         0  lm3s21xx_ssi.o ABSOLUTE
+    bl_autobaud.c                            0x00000000   Number         0  bl_autobaud.o ABSOLUTE
+    bl_check.c                               0x00000000   Number         0  bl_check.o ABSOLUTE
+    bl_config.c                              0x00000000   Number         0  bl_startup_rvmdk.o ABSOLUTE
+    bl_main.c                                0x00000000   Number         0  bl_main.o ABSOLUTE
+    bl_packet.c                              0x00000000   Number         0  bl_packet.o ABSOLUTE
+    bl_uart.c                                0x00000000   Number         0  bl_uart.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    UpdateHandler                            0x000000db   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    NmiSR                                    0x000000e9   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    FaultISR                                 0x000000eb   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    IntDefaultHandler                        0x000000ed   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    .text                                    0x20000124   Section        0  lm3s21xx_ssi.o(.text)
+    .text                                    0x200001f4   Section        0  bl_check.o(.text)
+    .text                                    0x200002d4   Section        0  bl_main.o(.text)
+    .text                                    0x20000678   Section        0  bl_packet.o(.text)
+    .text                                    0x20000780   Section        0  bl_uart.o(.text)
+    .text                                    0x200007fc   Section        0  disp.o(.text)
+    .text                                    0x20000928   Section        0  lm3s21xx_gpio.o(.text)
+    .constdata                               0x20000d1e   Section        4  bl_packet.o(.constdata)
+    g_pucACK                                 0x20000d1e   Data           2  bl_packet.o(.constdata)
+    g_pucNAK                                 0x20000d20   Data           2  bl_packet.o(.constdata)
+    .constdata                               0x20000d22   Section       30  disp.o(.constdata)
+    .data                                    0x20000d40   Section       17  bl_main.o(.data)
+    .data                                    0x20000d51   Section        8  disp.o(.data)
+    .bss                                     0x20000d5c   Section      136  bl_main.o(.bss)
+    .bss                                     0x20000de4   Section      192  bl_startup_rvmdk.o(.bss)
+    g_pulStack                               0x20000de4   Data           0  bl_startup_rvmdk.o(.bss)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  bl_startup_rvmdk.o(RESET)
+    Reset_Handler                            0x00000045   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    CPUcpsid                                 0x000000cb   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    CPUcpsie                                 0x000000d3   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    Delay                                    0x000000ef   Thumb Code     0  bl_startup_rvmdk.o(RESET)
+    Long Thumb to Thumb Veneer to CheckForceUpdate 0x00000105   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Long Thumb to Thumb Veneer to ConfigureDevice 0x0000010f   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Long Thumb to Thumb Veneer to Updater    0x00000119   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    SSIEnable                                0x20000125   Thumb Code    10  lm3s21xx_ssi.o(.text)
+    SSIConfigSetExpClk                       0x2000012f   Thumb Code   102  lm3s21xx_ssi.o(.text)
+    Init_Ssi                                 0x20000195   Thumb Code    40  lm3s21xx_ssi.o(.text)
+    SSIDataLen                               0x200001bd   Thumb Code    22  lm3s21xx_ssi.o(.text)
+    SSIDisable                               0x200001d3   Thumb Code    10  lm3s21xx_ssi.o(.text)
+    SSIDataPut                               0x200001dd   Thumb Code    14  lm3s21xx_ssi.o(.text)
+    CheckForceUpdate                         0x200001f5   Thumb Code   186  bl_check.o(.text)
+    ConfigureDevice                          0x200002d5   Thumb Code   166  bl_main.o(.text)
+    Updater                                  0x2000037b   Thumb Code   698  bl_main.o(.text)
+    CheckSum                                 0x20000679   Thumb Code    26  bl_packet.o(.text)
+    AckPacket                                0x20000693   Thumb Code    12  bl_packet.o(.text)
+    NakPacket                                0x2000069f   Thumb Code    14  bl_packet.o(.text)
+    ReceivePacket                            0x200006ad   Thumb Code   120  bl_packet.o(.text)
+    SendPacket                               0x20000725   Thumb Code    86  bl_packet.o(.text)
+    UARTFlush                                0x20000781   Thumb Code    26  bl_uart.o(.text)
+    UARTSend                                 0x2000079b   Thumb Code    54  bl_uart.o(.text)
+    UARTReceive                              0x200007d1   Thumb Code    32  bl_uart.o(.text)
+    SysCtlPeripheralEnable                   0x200007fd   Thumb Code    52  disp.o(.text)
+    Reset_HD7279                             0x20000831   Thumb Code    68  disp.o(.text)
+    Disp_Data                                0x20000875   Thumb Code    96  disp.o(.text)
+    Disp_Boot                                0x200008d5   Thumb Code    38  disp.o(.text)
+    Disp_Blank                               0x200008fb   Thumb Code    28  disp.o(.text)
+    GPIOPadConfigSet                         0x20000929   Thumb Code   216  lm3s21xx_gpio.o(.text)
+    GPIODirModeSet                           0x20000a01   Thumb Code    50  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeSSI                           0x20000a33   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeGPIOOutput                    0x20000a51   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    Init_Gpio                                0x20000a6f   Thumb Code    32  lm3s21xx_gpio.o(.text)
+    GPIODirModeGet                           0x20000a8f   Thumb Code    36  lm3s21xx_gpio.o(.text)
+    GPIOIntTypeSet                           0x20000ab3   Thumb Code    74  lm3s21xx_gpio.o(.text)
+    GPIOIntTypeGet                           0x20000afd   Thumb Code    52  lm3s21xx_gpio.o(.text)
+    GPIOPadConfigGet                         0x20000b31   Thumb Code   184  lm3s21xx_gpio.o(.text)
+    GPIOPinIntEnable                         0x20000be9   Thumb Code    12  lm3s21xx_gpio.o(.text)
+    GPIOPinIntDisable                        0x20000bf5   Thumb Code    12  lm3s21xx_gpio.o(.text)
+    GPIOPinIntStatus                         0x20000c01   Thumb Code    16  lm3s21xx_gpio.o(.text)
+    GPIOPinIntClear                          0x20000c11   Thumb Code     6  lm3s21xx_gpio.o(.text)
+    GPIOPinRead                              0x20000c17   Thumb Code     8  lm3s21xx_gpio.o(.text)
+    GPIOPinWrite                             0x20000c1f   Thumb Code     6  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeGPIOInput                     0x20000c25   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeGPIOOutputOD                  0x20000c43   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeI2C                           0x20000c61   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    GPIOPinTypePWM                           0x20000c7f   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeQEI                           0x20000c9d   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeTimer                         0x20000cbb   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeUART                          0x20000cd9   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    GPIOPinTypeUSBDigital                    0x20000cf7   Thumb Code    30  lm3s21xx_gpio.o(.text)
+    Long Thumb to Thumb Veneer to Delay      0x20000d15   Thumb Code    10  anon$$obj.o(Veneer$$Code)
+    Disp_Code_Tab                            0x20000d22   Data          30  disp.o(.constdata)
+    Disp_Sts                                 0x20000d40   Data           1  bl_main.o(.data)
+    g_ucStatus                               0x20000d41   Data           1  bl_main.o(.data)
+    g_ulTransferSize                         0x20000d44   Data           4  bl_main.o(.data)
+    g_ulTransferAddress                      0x20000d48   Data           4  bl_main.o(.data)
+    g_pucDataBuffer                          0x20000d4c   Data           4  bl_main.o(.data)
+    Board_Id                                 0x20000d50   Data           1  bl_main.o(.data)
+    Disp_Buf                                 0x20000d51   Data           8  disp.o(.data)
+    Image$$ZI$$Base                          0x20000d5c   Number         0  anon$$obj.o(linker$$defined$$symbols)
+    Image$$ZI$$Limit                         0x20000d5c   Number         0  anon$$obj.o(linker$$defined$$symbols)
+    g_pulDataBuffer                          0x20000d5c   Data         120  bl_main.o(.bss)
+    BOOT_EN                                  0x20000dd4   Data          16  bl_main.o(.bss)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000045
+
+  Load Region FLASH (Base: 0x00000000, Size: 0x00000d5c, Max: 0x00010000, ABSOLUTE)
+
+    Execution Region RESET (Base: 0x00000000, Size: 0x00000124, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000104   Code   RO          173  * RESET               bl_startup_rvmdk.o
+    0x00000104   0x0000000a   Ven    RO          181    Veneer$$Code        anon$$obj.o
+    0x0000010e   0x0000000a   Ven    RO          182    Veneer$$Code        anon$$obj.o
+    0x00000118   0x0000000a   Ven    RO          183    Veneer$$Code        anon$$obj.o
+
+
+    Execution Region RO (Base: 0x20000124, Size: 0x00000c1c, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000124   0x000000d0   Code   RO            1    .text               lm3s21xx_ssi.o
+    0x200001f4   0x000000e0   Code   RO           58    .text               bl_check.o
+    0x200002d4   0x000003a4   Code   RO           77    .text               bl_main.o
+    0x20000678   0x00000108   Code   RO          114    .text               bl_packet.o
+    0x20000780   0x0000007c   Code   RO          128    .text               bl_uart.o
+    0x200007fc   0x0000012c   Code   RO          141    .text               disp.o
+    0x20000928   0x000003ec   Code   RO          160    .text               lm3s21xx_gpio.o
+    0x20000d14   0x0000000a   Ven    RO          184    Veneer$$Code        anon$$obj.o
+    0x20000d1e   0x00000004   Data   RO          115    .constdata          bl_packet.o
+    0x20000d22   0x0000001e   Data   RO          142    .constdata          disp.o
+
+
+    Execution Region RW (Base: 0x20000d40, Size: 0x0000001c, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000d40   0x00000011   Data   RW           79    .data               bl_main.o
+    0x20000d51   0x00000008   Data   RW          143    .data               disp.o
+
+
+    Execution Region ZI (Base: 0x20000d5c, Size: 0x00000148, Max: 0x00010000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000d5c   0x00000000   Data   RW          180    linker$$defined$$symbols  anon$$obj.o
+    0x20000d5c   0x00000088   Zero   RW           78    .bss                bl_main.o
+    0x20000de4   0x000000c0   Zero   RW          172    .bss                bl_startup_rvmdk.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       224         38          0          0          0        575   bl_check.o
+       932         74          0         17        136       2238   bl_main.o
+       264          6          4          0          0       2024   bl_packet.o
+       260         84          0          0        192        300   bl_startup_rvmdk.o
+       124         12          0          0          0        877   bl_uart.o
+       300         18         30          8          0       1678   disp.o
+      1004          0          0          0          0       6277   lm3s21xx_gpio.o
+       208         10          0          0          0     118865   lm3s21xx_ssi.o
+
+    ----------------------------------------------------------------------
+      3358        242         34         28        328     132834   Object Totals
+        40          0          0          0          0          0   (incl. Generated)
+         2          0          0          3          0          2   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      3358        242         34         28        328     132436   Grand Totals
+      3358        242         34         28        328     132436   ELF Image Totals
+      3358        242         34         28          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 3392 (   3.31kB)
+    Total RW  Size (RW Data + ZI Data)               356 (   0.35kB)
+    Total ROM Size (Code + RO Data + RW Data)       3420 (   3.34kB)
+
+==============================================================================
+

@@ -1,0 +1,27 @@
+[Open Files]
+Active File Display Mode=3
+Active File Index=0
+Open File Line0=15309
+Open File Line1=7464
+Open File Line2=28537
+Open File Pos0=16333
+Open File Pos1=5832
+Open File Pos2=29716
+Open File Window Pos0=2,3,-1,-1,-4,-30,88,116,1193,470
+Open File Window Pos1=0,1,-1,-1,-4,-30,110,145,1215,499
+Open File Window Pos2=0,1,-1,-1,-4,-30,0,0,1105,354
+Open File0=.\UART.C
+Open File1=.\CAN.C
+Open File2=.\define.h
+Open File3=
+Remember Files=1
+
+[Project Information]
+Project Start=DC070C0002000B00120002002300000033
+Working Time=1935
+[Folders]
+库文件=1
+启动文件=1
+说明=1
+头文件=1
+应用文件=1

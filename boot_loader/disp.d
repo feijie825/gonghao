@@ -1,0 +1,12 @@
+.\disp.o: Disp.C
+.\disp.o: LM3S2139.h
+.\disp.o: LM3S21xx_types.h
+.\disp.o: LM3S21xx_Lib.h
+.\disp.o: LM3S21xx_gpio.h
+.\disp.o: LM3S21xx_ssi.h
+.\disp.o: lm3s21xx_sysctl.h
+.\disp.o: LM3S21xx_systick.h
+.\disp.o: LM3S21xx_debug.h
+.\disp.o: LM3S21xx_cpu.h
+.\disp.o: Disp.h
+.\disp.o: LM3S21xx_Lib.h

@@ -1,0 +1,11 @@
+bl_enet.o: bl_enet.c
+bl_enet.o: C:\Keil\ARM\RV31\INC\string.h
+bl_enet.o: ../hw_ethernet.h
+bl_enet.o: ../hw_flash.h
+bl_enet.o: ../hw_gpio.h
+bl_enet.o: ../hw_memmap.h
+bl_enet.o: ../hw_nvic.h
+bl_enet.o: ../hw_sysctl.h
+bl_enet.o: ../hw_types.h
+bl_enet.o: bl_config.h
+bl_enet.o: bl_decrypt.h

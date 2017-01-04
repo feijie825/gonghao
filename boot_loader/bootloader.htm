@@ -1,0 +1,338 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\bootloader.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\bootloader.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Mon Oct 28 10:08:28 2013
+<BR><P>
+<H3>Maximum Stack Usage =         52 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+Reset_Handler &rArr; Updater &rArr; ReceivePacket &rArr; UARTReceive
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[6]">Reset_Handler</a>
+ <LI><a href="#[7]">CPUcpsid</a>
+ <LI><a href="#[8]">CPUcpsie</a>
+ <LI><a href="#[9]">Delay</a>
+ <LI><a href="#[4]">UpdateHandler</a>
+ <LI><a href="#[1]">NmiSR</a>
+ <LI><a href="#[2]">FaultISR</a>
+ <LI><a href="#[3]">IntDefaultHandler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[1d]">SSIDataPut</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1d]">SSIDataPut</a><BR>
+ <LI><a href="#[1c]">SSIDataLen</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1c]">SSIDataLen</a><BR>
+ <LI><a href="#[9]">Delay</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[9]">Delay</a><BR>
+ <LI><a href="#[1]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[1]">NmiSR</a><BR>
+ <LI><a href="#[2]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[2]">FaultISR</a><BR>
+ <LI><a href="#[3]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[3]">IntDefaultHandler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[2]">FaultISR</a> from bl_startup_rvmdk.o(RESET) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[3]">IntDefaultHandler</a> from bl_startup_rvmdk.o(RESET) referenced 9 times from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[1]">NmiSR</a> from bl_startup_rvmdk.o(RESET) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[6]">Reset_Handler</a> from bl_startup_rvmdk.o(RESET) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[5]">SysTickIntHandler</a> from bl_main.o(.text) referenced from bl_startup_rvmdk.o(RESET)
+ <LI><a href="#[4]">UpdateHandler</a> from bl_startup_rvmdk.o(RESET) referenced from bl_startup_rvmdk.o(RESET)
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[6]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52 + Unknown Stack Size
+<LI>Call Chain = Reset_Handler &rArr; Updater &rArr; ReceivePacket &rArr; UARTReceive
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater (via Veneer)
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice (via Veneer)
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckForceUpdate (via Veneer)
+</UL>
+
+<P><STRONG><a name="[7]"></a>CPUcpsid</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET), UNUSED, KEPT)
+
+<P><STRONG><a name="[8]"></a>CPUcpsie</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET), UNUSED, KEPT)
+
+<P><STRONG><a name="[9]"></a>Delay</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_HD7279 (via Veneer)
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice (via Veneer)
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay
+<LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckForceUpdate (via Veneer)
+</UL>
+
+<P><STRONG><a name="[a]"></a>CheckForceUpdate</STRONG> (Thumb, 170 bytes, Stack size 8 bytes, bl_check.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8 + Unknown Stack Size
+<LI>Call Chain = CheckForceUpdate
+</UL>
+<BR>[Calls]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler (via Veneer)
+</UL>
+
+<P><STRONG><a name="[5]"></a>SysTickIntHandler</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, bl_main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysTickIntHandler
+</UL>
+<BR>[Calls]<UL><LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinRead
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[b]"></a>ConfigureDevice</STRONG> (Thumb, 142 bytes, Stack size 16 bytes, bl_main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
+<LI>Call Chain = ConfigureDevice &rArr; Init_Ssi &rArr; SSIConfigSetExpClk
+</UL>
+<BR>[Calls]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_HD7279
+<LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Ssi
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Gpio
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Boot
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler (via Veneer)
+</UL>
+
+<P><STRONG><a name="[c]"></a>Updater</STRONG> (Thumb, 564 bytes, Stack size 8 bytes, bl_main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = Updater &rArr; ReceivePacket &rArr; UARTReceive
+</UL>
+<BR>[Calls]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlush
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendPacket
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceivePacket
+<LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Boot
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Blank
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AckPacket
+</UL>
+<BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler (via Veneer)
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UpdateHandler (via Veneer)
+</UL>
+
+<P><STRONG><a name="[1b]"></a>CheckSum</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, bl_packet.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendPacket
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceivePacket
+</UL>
+
+<P><STRONG><a name="[14]"></a>AckPacket</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, bl_packet.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[19]"></a>NakPacket</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, bl_packet.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+</UL>
+<BR>[Called By]<UL><LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceivePacket
+</UL>
+
+<P><STRONG><a name="[13]"></a>ReceivePacket</STRONG> (Thumb, 134 bytes, Stack size 32 bytes, bl_packet.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = ReceivePacket &rArr; UARTReceive
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTReceive
+<LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NakPacket
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckSum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[16]"></a>SendPacket</STRONG> (Thumb, 68 bytes, Stack size 24 bytes, bl_packet.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = SendPacket &rArr; UARTReceive
+</UL>
+<BR>[Calls]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+<LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTReceive
+<LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CheckSum
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[15]"></a>UARTFlush</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, bl_uart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+<LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[18]"></a>UARTSend</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, bl_uart.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlush
+</UL>
+<BR>[Called By]<UL><LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NakPacket
+<LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendPacket
+<LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AckPacket
+</UL>
+
+<P><STRONG><a name="[1a]"></a>UARTReceive</STRONG> (Thumb, 46 bytes, Stack size 12 bytes, bl_uart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = UARTReceive
+</UL>
+<BR>[Called By]<UL><LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendPacket
+<LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceivePacket
+</UL>
+
+<P><STRONG><a name="[23]"></a>SysCtlPeripheralEnable</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, disp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysCtlPeripheralEnable
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Ssi
+<LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Gpio
+</UL>
+
+<P><STRONG><a name="[11]"></a>Reset_HD7279</STRONG> (Thumb, 72 bytes, Stack size 16 bytes, disp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
+<LI>Call Chain = Reset_HD7279
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDataPut
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDataLen
+<LI><a href="#[e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Delay (via Veneer)
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice
+</UL>
+
+<P><STRONG><a name="[1e]"></a>Disp_Data</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, disp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Disp_Data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDataPut
+<LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDataLen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Boot
+<LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Blank
+</UL>
+
+<P><STRONG><a name="[12]"></a>Disp_Boot</STRONG> (Thumb, 72 bytes, Stack size 8 bytes, disp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Disp_Boot &rArr; Disp_Data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Data
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+<LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice
+</UL>
+
+<P><STRONG><a name="[17]"></a>Disp_Blank</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, disp.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Disp_Blank &rArr; Disp_Data
+</UL>
+<BR>[Calls]<UL><LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Data
+</UL>
+<BR>[Called By]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater
+</UL>
+
+<P><STRONG><a name="[21]"></a>GPIOPadConfigSet</STRONG> (Thumb, 200 bytes, Stack size 8 bytes, lm3s21xx_gpio.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIOPadConfigSet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeSSI
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+</UL>
+
+<P><STRONG><a name="[20]"></a>GPIODirModeSet</STRONG> (Thumb, 46 bytes, Stack size 0 bytes, lm3s21xx_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeSSI
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+</UL>
+
+<P><STRONG><a name="[1f]"></a>GPIOPinTypeGPIOOutput</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, lm3s21xx_gpio.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIOPinTypeGPIOOutput &rArr; GPIOPadConfigSet
+</UL>
+<BR>[Calls]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Gpio
+</UL>
+
+<P><STRONG><a name="[22]"></a>GPIOPinTypeSSI</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, lm3s21xx_gpio.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = GPIOPinTypeSSI &rArr; GPIOPadConfigSet
+</UL>
+<BR>[Calls]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+<LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[10]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Gpio
+</UL>
+
+<P><STRONG><a name="[10]"></a>Init_Gpio</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, lm3s21xx_gpio.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = Init_Gpio &rArr; GPIOPinTypeSSI &rArr; GPIOPadConfigSet
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeSSI
+<LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice
+</UL>
+
+<P><STRONG><a name="[d]"></a>GPIOPinRead</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lm3s21xx_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickIntHandler
+</UL>
+
+<P><STRONG><a name="[e]"></a>GPIOPinWrite</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lm3s21xx_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_HD7279
+<LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickIntHandler
+</UL>
+
+<P><STRONG><a name="[25]"></a>SSIEnable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lm3s21xx_ssi.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Ssi
+</UL>
+
+<P><STRONG><a name="[24]"></a>SSIConfigSetExpClk</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, lm3s21xx_ssi.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SSIConfigSetExpClk
+</UL>
+<BR>[Called By]<UL><LI><a href="#[f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_Ssi
+</UL>
+
+<P><STRONG><a name="[f]"></a>Init_Ssi</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, lm3s21xx_ssi.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Init_Ssi &rArr; SSIConfigSetExpClk
+</UL>
+<BR>[Calls]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIConfigSetExpClk
+<LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIEnable
+<LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ConfigureDevice
+</UL>
+
+<P><STRONG><a name="[1c]"></a>SSIDataLen</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, lm3s21xx_ssi.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDataLen
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDataLen
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Data
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_HD7279
+</UL>
+
+<P><STRONG><a name="[1d]"></a>SSIDataPut</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, lm3s21xx_ssi.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDataPut
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDataPut
+<LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Disp_Data
+<LI><a href="#[11]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_HD7279
+</UL>
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[4]"></a>UpdateHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Stack]<UL><LI>Max Depth = 52 + Unknown Stack Size
+<LI>Call Chain = UpdateHandler &rArr; Updater &rArr; ReceivePacket &rArr; UARTReceive
+</UL>
+<BR>[Calls]<UL><LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Updater (via Veneer)
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[1]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[2]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[3]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, bl_startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> bl_startup_rvmdk.o(RESET)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

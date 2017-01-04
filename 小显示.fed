@@ -1,0 +1,187 @@
+;#<FEEDBACK># ARM Linker, 4.1 [Build 644]: Last Updated: Sat Nov 03 10:42:42 2012
+;VERSION 0.2
+;FILE can.o
+Proc_Mst_Check <= USED 0
+;FILE eng_err.o
+;FILE init.o
+Fill_Space_StrCpy <= USED 0
+;FILE interrupt.o
+;FILE lm3s21xx_adc.o
+ADCIntDisable <= USED 0
+ADCIntRegister <= USED 0
+ADCIntStatus <= USED 0
+ADCIntUnregister <= USED 0
+ADCSequenceOverflow <= USED 0
+ADCSequenceOverflowClear <= USED 0
+ADCSequenceUnderflow <= USED 0
+ADCSequenceUnderflowClear <= USED 0
+ADCSoftwareOversampleConfigure <= USED 0
+ADCSoftwareOversampleDataGet <= USED 0
+ADCSoftwareOversampleStepConfigure <= USED 0
+;FILE lm3s21xx_can.o
+CANBitTimingGet <= USED 0
+CANIntDisable <= USED 0
+CANIntRegister <= USED 0
+CANIntUnregister <= USED 0
+CANMessageClear <= USED 0
+CANRetryGet <= USED 0
+CANRetrySet <= USED 0
+CAN_MSG_TX_CANCEL <= USED 0
+;FILE lm3s21xx_flash.o
+FlashIntClear <= USED 0
+FlashIntDisable <= USED 0
+FlashIntEnable <= USED 0
+FlashIntGetStatus <= USED 0
+FlashIntRegister <= USED 0
+FlashIntUnregister <= USED 0
+FlashProtectGet <= USED 0
+FlashProtectSave <= USED 0
+FlashProtectSet <= USED 0
+FlashUsecGet <= USED 0
+FlashUsecSet <= USED 0
+FlashUserGet <= USED 0
+FlashUserSave <= USED 0
+FlashUserSet <= USED 0
+;FILE lm3s21xx_gpio.o
+GPIODirModeGet <= USED 0
+GPIOGetIntNumber <= USED 0
+GPIOIntTypeGet <= USED 0
+GPIOPadConfigGet <= USED 0
+GPIOPinIntClear <= USED 0
+GPIOPinIntDisable <= USED 0
+GPIOPinIntEnable <= USED 0
+GPIOPinIntStatus <= USED 0
+GPIOPinTypeADC <= USED 0
+GPIOPinTypeComparator <= USED 0
+GPIOPinTypeGPIOOutputOD <= USED 0
+GPIOPinTypeI2C <= USED 0
+GPIOPinTypePWM <= USED 0
+GPIOPinTypeQEI <= USED 0
+GPIOPinTypeUSBDigital <= USED 0
+GPIOPortIntRegister <= USED 0
+GPIOPortIntUnregister <= USED 0
+;FILE lm3s21xx_interrupt.o
+IntDisable <= USED 0
+IntPriorityGet <= USED 0
+IntPriorityGroupingGet <= USED 0
+IntPriorityGroupingSet <= USED 0
+IntRegister <= USED 0
+IntUnregister <= USED 0
+;FILE lm3s21xx_mpu.o
+Init_Mpu <= USED 0
+MPUDisable <= USED 0
+MPUEnable <= USED 0
+MPUIntRegister <= USED 0
+MPUIntUnregister <= USED 0
+MPURegionCountGet <= USED 0
+MPURegionDisable <= USED 0
+MPURegionEnable <= USED 0
+MPURegionGet <= USED 0
+MPURegionSet <= USED 0
+;FILE lm3s21xx_ssi.o
+SSIDMADisable <= USED 0
+SSIDMAEnable <= USED 0
+SSIDataGet <= USED 0
+SSIDataGetNonBlocking <= USED 0
+SSIDataLen <= USED 0
+SSIDataPut <= USED 0
+SSIDataPutNonBlocking <= USED 0
+SSIDisable <= USED 0
+SSIIntClear <= USED 0
+SSIIntDisable <= USED 0
+SSIIntEnable <= USED 0
+SSIIntRegister <= USED 0
+SSIIntStatus <= USED 0
+SSIIntUnregister <= USED 0
+;FILE lm3s21xx_sysctl.o
+SysCtlADCSpeedGet <= USED 0
+SysCtlBrownOutConfigSet <= USED 0
+SysCtlClkVerificationClear <= USED 0
+SysCtlDeepSleep <= USED 0
+SysCtlFlashSizeGet <= USED 0
+SysCtlGPIOAHBDisable <= USED 0
+SysCtlGPIOAHBEnable <= USED 0
+SysCtlIOSCVerificationSet <= USED 0
+SysCtlIntClear <= USED 0
+SysCtlIntDisable <= USED 0
+SysCtlIntEnable <= USED 0
+SysCtlIntRegister <= USED 0
+SysCtlIntStatus <= USED 0
+SysCtlIntUnregister <= USED 0
+SysCtlLDOConfigSet <= USED 0
+SysCtlLDOGet <= USED 0
+SysCtlMOSCVerificationSet <= USED 0
+SysCtlPLLVerificationSet <= USED 0
+SysCtlPWMClockGet <= USED 0
+SysCtlPWMClockSet <= USED 0
+SysCtlPeripheralClockGating <= USED 0
+SysCtlPeripheralDeepSleepDisable <= USED 0
+SysCtlPeripheralDeepSleepEnable <= USED 0
+SysCtlPeripheralPresent <= USED 0
+SysCtlPeripheralReset <= USED 0
+SysCtlPeripheralSleepDisable <= USED 0
+SysCtlPeripheralSleepEnable <= USED 0
+SysCtlReset <= USED 0
+SysCtlResetCauseClear <= USED 0
+SysCtlResetCauseGet <= USED 0
+SysCtlSRAMSizeGet <= USED 0
+SysCtlSleep <= USED 0
+;FILE lm3s21xx_systick.o
+SysTickDisable <= USED 0
+SysTickIntDisable <= USED 0
+SysTickIntRegister <= USED 0
+SysTickIntUnregister <= USED 0
+SysTickPeriodGet <= USED 0
+SysTickValueGet <= USED 0
+;FILE lm3s21xx_timer.o
+Reset_Timer <= USED 0
+TimerControlLevel <= USED 0
+TimerControlStall <= USED 0
+TimerControlTrigger <= USED 0
+TimerDisable <= USED 0
+TimerIntClear <= USED 0
+TimerIntDisable <= USED 0
+TimerIntRegister <= USED 0
+TimerIntStatus <= USED 0
+TimerIntUnregister <= USED 0
+TimerLoadGet <= USED 0
+TimerMatchGet <= USED 0
+TimerPrescaleGet <= USED 0
+TimerPrescaleSet <= USED 0
+TimerRTCDisable <= USED 0
+TimerRTCEnable <= USED 0
+TimerValueGet <= USED 0
+;FILE lm3s21xx_uart.o
+UARTBreakCtl <= USED 0
+UARTCharGetNonBlocking <= USED 0
+UARTCharPutNonBlocking <= USED 0
+UARTConfigGetExpClk <= USED 0
+UARTDMADisable <= USED 0
+UARTDMAEnable <= USED 0
+UARTDisableSIR <= USED 0
+UARTEnableSIR <= USED 0
+UARTFIFOLevelGet <= USED 0
+UARTIntRegister <= USED 0
+UARTIntUnregister <= USED 0
+UARTParityModeGet <= USED 0
+UARTParityModeSet <= USED 0
+UARTRxErrorClear <= USED 0
+UARTRxErrorGet <= USED 0
+UARTSpaceAvail <= USED 0
+;FILE lm3s21xx_watchdog.o
+WatchdogIntEnable <= USED 0
+WatchdogIntRegister <= USED 0
+WatchdogIntStatus <= USED 0
+WatchdogIntUnregister <= USED 0
+WatchdogLock <= USED 0
+WatchdogLockState <= USED 0
+WatchdogResetDisable <= USED 0
+WatchdogRunning <= USED 0
+WatchdogStallDisable <= USED 0
+WatchdogValueGet <= USED 0
+;FILE main.o
+;FILE uart.o
+BOOT_INT_DIS <= USED 0
+Get_Para <= USED 0
+PutChar <= USED 0
+SendStr <= USED 0

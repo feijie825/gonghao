@@ -1,0 +1,43 @@
+*** Creating Trace Output File 'DISP.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"lm3s21xx_can.o"'
+### List of Objects: adding '"lm3s21xx_flash.o"'
+### List of Objects: adding '"lm3s21xx_gpio.o"'
+### List of Objects: adding '"lm3s21xx_interrupt.o"'
+### List of Objects: adding '"lm3s21xx_mpu.o"'
+### List of Objects: adding '"lm3s21xx_ssi.o"'
+### List of Objects: adding '"lm3s21xx_sysctl.o"'
+### List of Objects: adding '"lm3s21xx_systick.o"'
+### List of Objects: adding '"lm3s21xx_timer.o"'
+### List of Objects: adding '"lm3s21xx_uart.o"'
+### List of Objects: adding '"lm3s21xx_watchdog.o"'
+### List of Objects: adding '"lm3s21xx_vect.s.o"'
+### List of Objects: adding '"cpu_keil.o"'
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '"interrupt.o"'
+### List of Objects: adding '"vari.o"'
+### List of Objects: adding '"disp.o"'
+### List of Objects: adding '"init.o"'
+### List of Objects: adding '"can.o"'
+### List of Objects: adding '"uart.o"'
+### List of Objects: adding '"clk_err.o"'
+### List of Objects: adding '"eng_err.o"'
+### List of Objects: adding '"bitvari.o"'
+### List of Objects: adding '"加密.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "lm3s21xx_can.o" "lm3s21xx_flash.o" "lm3s21xx_gpio.o" "lm3s21xx_interrupt.o" "lm3s21xx_mpu.o" "lm3s21xx_ssi.o" "lm3s21xx_sysctl.o" "lm3s21xx_systick.o" "lm3s21xx_timer.o" "lm3s21xx_uart.o" "lm3s21xx_watchdog.o" "lm3s21xx_vect.s.o" "cpu_keil.o" "main.o" "interrupt.o" "vari.o" "disp.o" "init.o" "can.o" "uart.o" "clk_err.o" "eng_err.o" "bitvari.o" "加密.o" --library_type=microlib --feedback "DISP.fed" 
+--strict --scatter "小显示.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\DISP.map" -o "DISP.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'DISP.axf'
+### ADS-LD Command File: 'DISP.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'DISP.lnp', Handle=0x00000434
+### Writing '.lnp' file
+### ADS-LD Command file 'DISP.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

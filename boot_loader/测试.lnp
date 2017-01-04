@@ -1,0 +1,4 @@
+--cpu Cortex-M3 "lm3s21xx_ssi.o" "bl_autobaud.o" "bl_check.o" "bl_main.o" "bl_packet.o" "bl_uart.o" "disp.o" "lm3s21xx_gpio.o" "bl_startup_rvmdk.o" --strict --scatter ".\bl_link.sct" 
+--entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\≤‚ ‘.map" -o "≤‚ ‘.axf"

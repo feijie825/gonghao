@@ -1,0 +1,10 @@
+lm3s21xx_i2c.o: LM3S21xx_i2c.c
+lm3s21xx_i2c.o: LM3S2139.h
+lm3s21xx_i2c.o: hw_types.h
+lm3s21xx_i2c.o: hw_i2c.h
+lm3s21xx_i2c.o: hw_ints.h
+lm3s21xx_i2c.o: hw_memmap.h
+lm3s21xx_i2c.o: C:\Keil\ARM\INC\Luminary\debug.h
+lm3s21xx_i2c.o: C:\Keil\ARM\INC\Luminary\i2c.h
+lm3s21xx_i2c.o: C:\Keil\ARM\INC\Luminary\sysctl.h
+lm3s21xx_i2c.o: C:\Keil\ARM\INC\Luminary\interrupt.h

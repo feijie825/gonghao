@@ -1,0 +1,1 @@
+--feedback "–°œ‘ æ.fed" -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I "C:\Keil\ARM\CMSIS\Include" -I "C:\Keil\ARM\INC\Luminary" -o "stdmtr.o" --omf_browse "stdmtr.crf" --depend "stdmtr.d" "StdMtr.C"

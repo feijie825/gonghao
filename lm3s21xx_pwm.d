@@ -1,0 +1,9 @@
+lm3s21xx_pwm.o: LM3S21xx_pwm.c
+lm3s21xx_pwm.o: hw_ints.h
+lm3s21xx_pwm.o: hw_memmap.h
+lm3s21xx_pwm.o: hw_pwm.h
+lm3s21xx_pwm.o: hw_sysctl.h
+lm3s21xx_pwm.o: hw_types.h
+lm3s21xx_pwm.o: C:\Keil\ARM\INC\Luminary\debug.h
+lm3s21xx_pwm.o: C:\Keil\ARM\INC\Luminary\interrupt.h
+lm3s21xx_pwm.o: C:\Keil\ARM\INC\Luminary\pwm.h

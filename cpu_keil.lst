@@ -1,0 +1,133 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;******************** (C) COPYRIGHT 2008 LUMINARY LM3S21
+                       xx ********************
+    2 00000000         ;* File Name          : cpu_Keil.s
+    3 00000000         ;* Author             : ’≈¡¶’Û
+    4 00000000         ;* 
+    5 00000000         ;*******************************************************
+                       ************************/
+    6 00000000         
+    7 00000000         ;*******************************************************
+                       ***********************
+    8 00000000         ;
+    9 00000000         ; The assembly code preamble required to put the assembl
+                       er into the correct
+   10 00000000         ; configuration.
+   11 00000000         ;
+   12 00000000         ;*******************************************************
+                       ***********************
+   13 00000000                 thumb
+   14 00000000                 require8
+   15 00000000                 preserve8
+   16 00000000         
+   17 00000000         ;*******************************************************
+                       ***********************
+   18 00000000         ;
+   19 00000000         ; The entire contents of this file go into the code sect
+                       ion.
+   20 00000000         ;
+   21 00000000         ;*******************************************************
+                       ***********************
+   22 00000000                 area             ||.text||, code, readonly, alig
+n=2
+   23 00000000         
+   24 00000000         ;*******************************************************
+                       ***********************
+   25 00000000         ;
+   26 00000000         ; Wrapper function for the CPSID instruction.  Returns t
+                       he state of PRIMASK
+   27 00000000         ; on entry.
+   28 00000000         ;
+   29 00000000         ;*******************************************************
+                       ***********************
+   30 00000000                 export           CPUcpsid
+   31 00000000         CPUcpsid
+   32 00000000 F3EF 8010       mrs              r0, PRIMASK
+   33 00000004 B672            cpsid            i
+   34 00000006 4770            bx               lr
+   35 00000008         
+   36 00000008         ;*******************************************************
+                       ***********************
+   37 00000008         ;
+   38 00000008         ; Wrapper function for the CPSIE instruction.  Returns t
+                       he state of PRIMASK
+   39 00000008         ; on entry.
+   40 00000008         ;
+   41 00000008         ;*******************************************************
+                       ***********************
+   42 00000008                 export           CPUcpsie
+   43 00000008         CPUcpsie
+   44 00000008 F3EF 8010       mrs              r0, PRIMASK
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   45 0000000C B662            cpsie            i
+   46 0000000E 4770            bx               lr
+   47 00000010         
+   48 00000010         ;*******************************************************
+                       ***********************
+   49 00000010         ;
+   50 00000010         ; Wrapper function for the WFI instruction.
+   51 00000010         ;
+   52 00000010         ;*******************************************************
+                       ***********************
+   53 00000010                 export           CPUwfi
+   54 00000010         CPUwfi
+   55 00000010 BF30            wfi
+   56 00000012 4770            bx               lr
+   57 00000014         
+   58 00000014                 end
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\cpu_keil.d -o.\cpu_keil.o -IE:\Lm3s2139-gonghao.20161107∏ƒ\RTE\_
+DEBUG_IN_FLASH -ID:\Keil_v5.22\ARM\PACK\Keil\LM3S_DFP\1.1.0\Device\Include -ID:
+\Keil_v5.22\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --predefine="__UV
+ISION_VERSION SETA 522" --predefine="LM3S2139 SETA 1" --list=.\cpu_keil.lst cpu
+_keil.S
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+CPUcpsid 00000000
+
+Symbol: CPUcpsid
+   Definitions
+      At line 31 in file cpu_keil.S
+   Uses
+      At line 30 in file cpu_keil.S
+Comment: CPUcpsid used once
+CPUcpsie 00000008
+
+Symbol: CPUcpsie
+   Definitions
+      At line 43 in file cpu_keil.S
+   Uses
+      At line 42 in file cpu_keil.S
+Comment: CPUcpsie used once
+CPUwfi 00000010
+
+Symbol: CPUwfi
+   Definitions
+      At line 54 in file cpu_keil.S
+   Uses
+      At line 53 in file cpu_keil.S
+Comment: CPUwfi used once
+|.text| 00000000
+
+Symbol: |.text|
+   Definitions
+      At line 22 in file cpu_keil.S
+   Uses
+      None
+Comment: |.text| unused
+4 symbols
+337 symbols in table

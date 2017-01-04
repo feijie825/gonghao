@@ -1,0 +1,5 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork 
+-I C:\Keil\ARM\RV31\INC
+-I C:\Keil\ARM\CMSIS\Include
+-I C:\Keil\ARM\Inc\Luminary
+-o .\lm3s21xx_gpio.o --depend .\lm3s21xx_gpio.d --feedback ".\bootloader.fed" "LM3S21xx_gpio.c"

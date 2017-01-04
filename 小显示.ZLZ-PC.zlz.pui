@@ -1,0 +1,56 @@
+[Open Files]
+Active File Display Mode=3
+Active File Index=3
+Open File Line0=5258
+Open File Line1=5860
+Open File Line2=0
+Open File Line3=4843
+Open File Line4=263
+Open File Line5=441
+Open File Line6=1734
+Open File Line7=999
+Open File Line8=972
+Open File Line9=2581
+Open File Pos0=5592
+Open File Pos1=6457
+Open File Pos2=864
+Open File Pos3=5605
+Open File Pos4=615
+Open File Pos5=927
+Open File Pos6=3255
+Open File Pos7=1168
+Open File Pos8=1560
+Open File Pos9=3099
+Open File Window Pos0=0,1,-1,-1,-4,-30,88,116,806,584
+Open File Window Pos1=0,1,-1,-1,-4,-30,110,145,828,615
+Open File Window Pos2=0,1,-1,-1,-4,-30,132,174,850,644
+Open File Window Pos3=2,3,-1,-1,-4,-30,154,203,872,673
+Open File Window Pos4=0,1,-1,-1,-4,-30,176,232,894,702
+Open File Window Pos5=0,1,-1,-1,-4,-30,0,0,718,470
+Open File Window Pos6=0,1,-1,-1,-4,-30,22,29,740,499
+Open File Window Pos7=0,1,-1,-1,-4,-30,44,58,762,528
+Open File Window Pos8=0,1,-1,-1,-4,-30,0,0,740,481
+Open File Window Pos9=0,1,-1,-1,-4,-30,22,29,762,510
+Open File0=.\LM3S21xx_can.h
+Open File1=.\LM3S21xx_can.c
+Open File10=
+Open File2=.\vari.c
+Open File3=.\define.h
+Open File4=.\vari.h
+Open File5=.\Init.C
+Open File6=.\CAN.C
+Open File7=.\UART.C
+Open File8=.\main.c
+Open File9=.\ENG_ERR.C
+Remember Files=1
+
+[Project Information]
+Project Start=DC070B000500020010002500130000003D
+Working Time=237537
+
+[Folders]
+库文件=1
+说明=1
+头文件=1
+应用文件=1
+
